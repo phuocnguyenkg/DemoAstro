@@ -1,0 +1,44 @@
+---
+const navLinks = [
+  { name: "Trang chủ", href: "/", active: true },
+  { name: "TV & Sự kiện", href: "/tv" },
+  { name: "Phim", href: "/movies" },
+  { name: "Thể thao", href: "/sports" },
+  { name: "Danh mục", href: "/categories" },
+];
+---
+
+<header class="bg-black text-white">
+  <div class="container mx-auto flex items-center justify-between py-4 px-6">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-bold text-red-500">
+      TV<span class="text-white">360</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-6">
+      {navLinks.map((link) => (
+        <a href={link.href} class={`hover:text-red-500 ${link.active ? "border-b-2 border-red-500" : ""}`}>
+          {link.name}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Search & Icons -->
+    <div class="flex items-center space-x-4">
+      <input type="text" placeholder="Tìm kiếm" class="hidden md:block px-2 py-1 rounded bg-gray-800 text-white placeholder-gray-400" />
+
+      <button class="text-white">
+        🔔
+      </button>
+
+      <button class="bg-red-500 px-3 py-1 rounded text-white">
+        Mua gói
+      </button>
+
+      <button class="text-white">
+        👤
+      </button>
+    </div>
+  </div>
+</header>

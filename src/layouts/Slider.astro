@@ -1,0 +1,67 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
+---
+
+<div class="swiper w-full h-[500px]">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 1" class="w-full h-full object-cover" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 2" class="w-full h-full object-cover" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 3" class="w-full h-full object-cover" />
+    </div>
+  </div>
+  <!-- Nút điều hướng -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- Chấm tròn phân trang -->
+</div>
+
+<!-- Thumbs gallery -->
+<div class="swiper-thumbs w-3xl h-[100px] mt-4">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Thumb 1" class="w-full h-full object-cover" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Thumb 2" class="w-full h-full object-cover" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Thumb 3" class="w-full h-full object-cover" />
+    </div>
+  </div>
+</div>
+
+<!-- Script khởi tạo Swiper -->
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const thumbsSwiper = new Swiper(".swiper-thumbs", {
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    new Swiper(".swiper", {
+      modules: [Navigation, Pagination, Autoplay, Thumbs],
+      slidesPerView: 1,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: { delay: 13000 },
+      thumbs: {
+        swiper: thumbsSwiper,
+      },
+    });
+  });
+</script>

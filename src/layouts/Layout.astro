@@ -1,3 +1,9 @@
+---
+import '../styles/global.css';
+import Banner from './Banner';
+import Header from './Header.astro';
+import Slider from './Slider.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,7 +14,9 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+    <Header/>
+    <Slider />
+		<slot  />
 	</body>
 </html>
 

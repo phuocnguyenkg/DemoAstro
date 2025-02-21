@@ -1,0 +1,22 @@
+.swiper-pagination {
+  background-color: turquoise;
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.custom-bullet-active {
+  background-color: #ff0000;
+}
+
+.custom-pagination {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999999999;
+}
