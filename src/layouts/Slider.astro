@@ -1,11 +1,8 @@
 ---
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/thumbs";
+
 ---
 
-<div class="swiper w-full h-[500px]">
+<div class="list-custom-swiper swiper w-full h-[500px]">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
       <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 1" class="w-full h-full object-cover" />
@@ -47,10 +44,10 @@ import "swiper/css/thumbs";
     const thumbsSwiper = new Swiper(".swiper-thumbs", {
       slidesPerView: 3,
       freeMode: true,
-      watchSlidesProgress: true,
+    watchSlidesProgress: true,
     });
 
-    new Swiper(".swiper", {
+    new Swiper(".list-custom-swiper", {
       modules: [Navigation, Pagination, Autoplay, Thumbs],
       slidesPerView: 1,
       loop: true,

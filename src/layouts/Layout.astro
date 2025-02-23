@@ -1,8 +1,15 @@
 ---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/thumbs";
 import '../styles/global.css';
 import Banner from './Banner';
 import Header from './Header.astro';
 import Slider from './Slider.astro';
+import ListItem from '@/components/common/Elements/ListItem/ListItem.astro';
+import Product from "@/components/Product/Product.astro";
+
 ---
 <!doctype html>
 <html lang="en">
@@ -16,6 +23,8 @@ import Slider from './Slider.astro';
 	<body>
     <Header/>
     <Slider />
+    <ListItem/>
+    <Product/>
 		<slot  />
 	</body>
 </html>
