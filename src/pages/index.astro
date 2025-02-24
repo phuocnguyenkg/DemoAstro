@@ -4,7 +4,7 @@ import Welcome from "@/components/Welcome.astro";
 import Layout from "@/layouts/Layout.astro";
 
 
-const res = fetch('http://localhost:3000/userss')
+const res = fetch('http://localhost:3000/user')
   .then(response => response.json())
   .then(json => console.log(json))
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
