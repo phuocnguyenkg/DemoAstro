@@ -1,17 +1,25 @@
 ---
+import "swiper/css";
+import "swiper/css/navigation";
 
+import Image from "astro/components/Image.astro";
 ---
 
-<div class="list-custom-swiper swiper w-full h-[500px]">
+<div class="list-custom-swiper swiper !w-[200] h-[400px]">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 1" class="w-full h-full object-cover" />
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={500} height={400}  alt="Slide 1" class="w-[100%] object-cover" />
     </div>
-    <div class="swiper-slide">
-      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 2" class="w-full h-full object-cover" />
-    </div>
-    <div class="swiper-slide">
-      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 3" class="w-full h-full object-cover" />
+     <div class="swiper-slide">
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={300} height={300}  alt="Slide 1" class="w-[100%] object-cover" />
+    </div><div class="swiper-slide">
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={300} height={300}  alt="Slide 1" class="w-[100%] object-cover" />
+    </div><div class="swiper-slide">
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={300} height={300}  alt="Slide 1" class="w-[100%] object-cover" />
+    </div><div class="swiper-slide">
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={300} height={300}  alt="Slide 1" class="w-[100%] object-cover" />
+    </div><div class="swiper-slide">
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/09/18/173909910629/d907b60995b4.jpg" width={300} height={300}  alt="Slide 1" class="w-[100%] object-cover" />
     </div>
   </div>
   <!-- Nút điều hướng -->
@@ -24,7 +32,7 @@
 <div class="swiper-thumbs w-3xl h-[100px] mt-4">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Thumb 1" class="w-full h-full object-cover" />
+      <Image src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" width="300" height="500" alt="Thumb 1" class="w-full h-full object-cover"  />
     </div>
     <div class="swiper-slide">
       <img src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Thumb 2" class="w-full h-full object-cover" />
@@ -37,7 +45,7 @@
 
 <!-- Script khởi tạo Swiper -->
 <script>
-  import Swiper from "swiper";
+  import {Swiper} from "swiper";
   import { Navigation, Pagination, Autoplay, Thumbs } from "swiper/modules";
 
   document.addEventListener("DOMContentLoaded", () => {
