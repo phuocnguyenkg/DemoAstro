@@ -2,8 +2,9 @@
 import Image from "astro/components/Image.astro";
 
 ---
-<div class="container mx-auto"><div class="custom-swiper swiper w-full h-[500px]">
-  <div class=" swiper-wrapper">
+<div class="container mx-auto">
+  <div class="custom-swiper swiper w-full h-[500px] [& .swiper-button-next]-text-amber-300 group">
+  <div class="swiper-wrapper ">
     <div class=" swiper-slide">
         <Image src="https://img-zlr1.tv360.vn/image1/2025/02/05/14/1738740692247/c66855ae5acd.jpg" alt="Slide 1" class="w-full h-full object-cover" width="300" height="500" />
     </div>
@@ -89,7 +90,7 @@ import Image from "astro/components/Image.astro";
     </div>
   </div>
 
-  <div class="swiper-button-next"></div>
+  <div class="swiper-button-next group-[.custom-swiper]:text-amber-300"></div>
   <div class="swiper-button-prev"></div>
 </div></div>
 
